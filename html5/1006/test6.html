@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>test6_form.html(폼태그연습)</title>
+</head>
+<body>
+  <h2>폼태그연습</h2>
+  <hr/>
+  <h2> 회 원 가 입 </h2>
+  <form name='myform' method='get' action='서버에서 받을 파일명.jsp'>
+    <p><label for='name'>성명 : </label><input type='text' name='name' id='name' placeholder='이름을 입력하세요' autofocus /></p> <!-텍스트필드-->
+    <p><label for='age'>나이 : </label><input type='number' name='age' id='age' min='10' value='15' max='99'/</p> <!-숫자를 넣었어도 INT가 아니라 STRING이다-->
+    <p><label for='nickname'>닉네임 : </label><input type='text' name='nickname' id='nickname' size='5' value='홍장군' /></p>
+    <p><label for='pwd'>비밀번호: </label><input type='password' name='pwd' id='pwd'  maxlength='8' placeholder='비밀번호는 8자 이내입니다' /> </p>
+    <p><label for='search'>검색어 : </label><input type = 'search' name='search' id='search' placeholder='검색어를 입력하세요'/></p>
+    <p><label for='email'>이메일 : </label><input type = 'email' name='email' id='email' placeholder='메일주소를 입력하세요'/></p>
+    <p>성별 : 
+      <input type='radio' name='gender' value='남자'/>남자
+      <input type='radio' name='gender' value='여자'/>여자
+    </p>
+    <h4> 보유카드현황</h4>
+      <input type='checkbox' name='card' value='LG카드' /> LG카드
+      <input type='checkbox' name='card' value='삼성카드' /> 삼성카드
+      <input type='checkbox' name='card' value='농협카드' /> 농협카드
+      <input type='checkbox' name='card' value='신한카드' /> 신한카드
+      <input type='checkbox' name='card' value='BC카드' /> BC카드
+      <input type='checkbox' name='card' value='유희왕' /> 유희왕카드
+    <!-여러개의 내용이 한번에 넘어오면 무조건 배열로 넘어간다-->
+    </p>
+    
+    <p> 직업
+      <select name='job'>
+        <option value=''>직업을 선택하세요</option>
+        <option value='학생'>학생</option>
+        <option value='직장인'>직장인</option>
+        <option value='백수'>백수</option>
+        <option value='자택경비'>자택경비</option>
+        <option value='기타'>기타</option>
+        <option value='기타리스트'>기타리스트</option>
+      </select>
+    </p>
+    
+    <p> 즐겨먹는 음식
+      <select name='food' size='5' multiple>
+        <option value='자장면'>자장면</option>
+        <option value='짬뽕'>짬뽕</option>
+        <option value='볶음밥'>볶음밥</option>
+        <option value='떡볶이'>떡볶이</option>
+        <option value='만두'>만두</option>
+        <option value='마라탕'>마라탕</option>
+        <option value='탕후루'>탕후루</option>
+      </select>
+    </p>
+    <p>자기소개 : 
+      <textarea rows='5' cols='50' name= 'content'></textarea>
+    </p>
+    <p> 첨부파일:
+      <input type='file' name='fname'/>
+    </p>
+    <input type='hidden' name='idx' value='1234'/>
+    <hr/>
+    <p>
+       주문수량 : 
+      <input type = 'number' name='su' min='5' max='20' step='5'/>
+    </p>
+    <p>
+       주문수량 : 
+      <input type='range' min='1' max='10' value='1' /> 개 
+    </p>
+    <p>
+    작업 진행 상태  : 
+      <progress value='30' max='100'></progress> <!-- 30%로 작성하면안됨-->
+    </p>
+    <p>
+      사용량(트래픽 수) : 
+      <meter value='910' low='200' high='800' min='50' max='1000'> </meter>
+    </p>
+    <p>
+      그린대학교 학과목록
+      <select name='kwa' id='kwa'>
+        <optgroup label='공과대학'>
+          <option>기계공학과</option>
+          <option>전기공학과</option>
+          <option>전자공학과</option>
+          <option>컴퓨터공학과</option>
+          <option>토목공학과</option>
+        </optgroup>
+        <optGroup label='인문대학'>
+          <option>어문학괴</option>
+          <option>철학과</option>
+          <option>경영학과</option>
+          <option>행정학과</option>
+        </optGroup>
+      </select>
+    </p>
+    <p>
+      대학명 : 
+      <input type='text' name='uni' value='그린대학교' readonly/>
+    </p>
+    <p> 학과입력 : 
+      <input type ='text' name='hak' id='hak' required list='list'/>
+      <datalist id='list'>
+        <option>기계공학과</option>
+        <option>전기공학과</option>
+        <option>전자공학과</option>
+        <option>컴퓨터공학과</option>
+        <option>토목공학과</option>
+        <option>어문학과</option>
+        <option>철학과</option>
+        <option>경영학과</option>
+        <option>행정학과</option>
+      </datalist>
+    </p>
+    
+  </form>
+</body>
+</html>

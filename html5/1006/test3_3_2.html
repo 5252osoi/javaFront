@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>table태그 연습3_3_2</title>
+</head>
+<body>
+<table border='1px' width='1000px' height='1000px' align = 'center' cellpadding ='0px' cellspacing='0px'>
+  <tr>
+    <td>
+      <table  background='../../images/title.png' border='1'width='100%' height='200px' cellpadding ='0px' cellspacing='0px'>
+        <tr>
+          <td>
+            <table border='1px' width ='100%' height='200px'></table>
+              <tr>
+                <td width='800px'></td>
+                <td width='200px' align='center'>
+                  <a href='test3_3.html'>홈으로</a><br/>
+                  <a href='#'>커뮤니티</a><br/>
+                  <a href='#'>사이트맵</a><br/>
+                  <a href='test3_3_2.html'>회원가입</a><br/>
+                </td>
+              </tr>
+          </td>
+        </tr>
+      </table>
+      <table border='1'width='100%' height='650' cellpadding ='0px' cellspacing='0px'>
+        <tr>
+          <td width='150px'>
+            <p><a href='#'>메뉴1</a></p>
+            <p><a href='#'>메뉴2</a></p>
+            <p><a href='#'>메뉴3</a></p>
+            <p><a href='#'>메뉴4</a></p>
+          </td>
+          
+          <td width='700px'>
+            <!--테이블 넣어서 회원가입창-->
+              <form name='myform' method='get' action='#'>
+                <table border='0px' cellpadding='10px' cellspacing='0px'>
+                  <caption><h2>회 원 가 입</h2></caption>
+                  <tr>
+                    <th bgcolor='pink'><label for='name'>성명 &nbsp;  : </label></th>
+                    <td><input type='text' name='name' id='name' placeholder='이름을 입력하세요' autofocus required /></td>
+                  </tr> <!-텍스트필드-->
+                  <tr>
+                    <td bgcolor='pink' align='center'><label for='age'>나이 &nbsp;  : </label></td>
+                    <td><input type='number' name='age' id='age' min='10' value='15' max='99' required/></td>
+                  </tr> <!-숫자를 넣었어도 INT가 아니라 STRING이다-->
+                  <tr>
+                    <td bgcolor='pink' align='center'><label for='nickname'>닉네임 &nbsp;  : </label></td>
+                    <td><input type='text' name='nickname'size='5' id='nickname' value='홍장군'  required/></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor='pink' align='center'><label for='pwd'>비밀번호 &nbsp; : </label></td>
+                    <td><input type='password' name='pwd' maxlength='8' id='pwd' placeholder='비밀번호는 8자 이내입니다'  required /> </td>
+                  </tr>
+                  <tr>
+                    <td align='center'><label for='search'>검색어 &nbsp;  : </label></td>
+                    <td><input type = 'search' name='search' id='search'placeholder='검색어를 입력하세요'/></td>
+                  </tr>
+                  <tr>
+                    <td align='center'><label for='email'>이메일 &nbsp;  : </label></td>
+                    <td><input type = 'email' name='email' id='email' placeholder='메일주소를 입력하세요'  required/></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor='pink' align='center'>성별 &nbsp;  : </td>
+                    <td>
+                      <input type='radio' name='gender' value='남자'/>남자 &nbsp; 
+                      <input type='radio' name='gender' value='여자'/>여자
+                    </td>
+                  </tr>
+                    <td align='center'> 보유카드현황 &nbsp; :</td>
+                    <td>
+                      <input type='checkbox' name='card' value='LG카드' /> LG카드
+                      <input type='checkbox' name='card' value='삼성카드' /> 삼성카드
+                      <input type='checkbox' name='card' value='농협카드' checked /> 농협카드
+                      <input type='checkbox' name='card' value='신한카드' /> 신한카드
+                      <input type='checkbox' name='card' value='BC카드' /> BC카드
+                      <input type='checkbox' name='card' value='유희왕' /> 유희왕카드
+                    </td>
+                      <!-여러개의 내용이 한번에 넘어오면 무조건 배열로 넘어간다-->
+                  </tr>
+                  
+                  <tr>
+                    <td align='center'>직업 &nbsp;  :</td>
+                    <td>
+                      <select name='job'>
+                        <option value=''>직업을 선택하세요</option>
+                        <option value='학생'>학생</option>
+                        <option value='직장인'>직장인</option>
+                        <option value='백수'>백수</option>
+                        <option value='자택경비'>자택경비</option>
+                        <option value='기타'>기타</option>
+                        <option value='기타리스트'>기타리스트</option>
+                      </select>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td align='center'>즐겨먹는 음식 &nbsp; :</td>
+                    <td>
+                      <select name='food' size='5' multiple>
+                        <option value='자장면'>자장면</option>
+                        <option value='짬뽕'>짬뽕</option>
+                        <option value='볶음밥'>볶음밥</option>
+                        <option value='떡볶이' selected >떡볶이</option>
+                        <option value='만두'>만두</option>
+                        <option value='마라탕'>마라탕</option>
+                        <option value='탕후루'>탕후루</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align='center'>자기소개 &nbsp;  : </td>
+                    <td>
+                      <textarea rows='5' cols='50' name= 'content'></textarea>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td align='center'>첨부파일 &nbsp;  : </td>
+                    <td>
+                      <input type='file' name='fname'/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan='2' align='center'>
+                    <!--
+                      <button type='submit'> 전 송 </button> &nbsp;  &nbsp; 
+                      <button type='reset'> 재 입 력 </button>
+                      <button type='button'> 처 음 으 로 </button>
+                    -->
+                    <input type ='submit' value ='전송'> &nbsp;  &nbsp; 
+                    <input type ='reset' value ='재입력'> &nbsp;  &nbsp; 
+                    <input type ='button' value ='처음으로'>
+                    
+                    </td>
+                  </tr>
+                </table>
+               <input type='hidden' name='idx' value='1234'/>
+               <hr/>
+              </form>
+            
+            
+          </td>
+          
+          <td width='150px'>
+            <br/>
+            <p>광고1</p>
+            <p>광고1</p>
+            <p>광고1</p>
+            <p>광고1</p>
+            <p>광고1</p>
+          </td>
+        </tr>
+      </table>
+      <table border='1'width='100%' height='150px' bgcolor='skyblue' cellpadding ='0px' cellspacing='0px'>
+        <tr>
+          <td>
+          <br/>
+          <p align='center'> Copyright : 2023.10.06 Designed by 5252
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+</body>
+</html>
+
