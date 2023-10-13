@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>membership</title>
+    <script>
+        'use strict';
+        function submitCheck(){
+            console.log("ddddd")
+            let id=document.getElementById("id").value;
+            let pwd=document.getElementById("pwd").value;
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let tel=document.getElementById("tel").value;
+        
+            alert("가입확인");
+            document.write("아이디 : "+ id +"<br/>");
+            document.write("비밀번호 : "+ pwd +"<br/>");
+            document.write("이름 : "+ name +"<br/>");
+            document.write("이메일 : "+ email +"<br/>");
+            document.write("전화번호 : "+ tel+"<br/>");
+            document.write("<p><input type='button' value='돌아가기' onclick='location.reload()'/></p>");
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="container" style="width: 30%;">
+        <p><br/></p>
+        <h2>개인 회원가입</h2>
+        <p>가입을 위한 정보를 입력해주세요.</p>
+        <form class="was-validated">
+            <div class="form-group">
+                <label for="name">아이디:</label>
+                <input type="text" class="form-control" id="id" placeholder="아이디를 입력하세요" name="id" autofocus required />
+                <div class="valid-feedback">확인됨</div>
+                <div class="invalid-feedback">필수 입력사항 입니다.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">비밀번호:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력하세요" name="pwd" required/>
+                <div class="valid-feedback">확인됨</div>
+                <div class="invalid-feedback">필수 입력사항 입니다..</div>
+            </div>
+            <div class="form-group">
+                <label for="name">이름:</label>
+                <input type="text" class="form-control" id="name" placeholder="이름 입력" name="name" required />
+                <div class="valid-feedback">확인됨</div>
+                <div class="invalid-feedback">필수 입력사항 입니다.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일:</label>
+                <input type="email" class="form-control" placeholder="email@green.com" id="email" required />
+                <div class="valid-feedback">확인됨</div>
+                <div class="invalid-feedback">필수 입력사항 입니다.</div>
+            </div>
+            <div class="form-group">
+                <label for="tel">휴대폰:</label>
+                <input type="text" class="form-control" placeholder="'-'빼고 숫자만 입력'" id="tel">
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label ">
+                <input class="form-check-input" type="checkbox" name="remember" required> 정보 이용에 동의합니다.
+                <div class="valid-feedback">동의하셨습니다..</div>
+                <div class="invalid-feedback">(대충 약관에 동의해달라는 내용)</div>
+                </label>
+            </div>
+            <div>
+                <input type="button" type="submit" class="btn btn-primary" onclick="submitCheck()" style="width: 100%;" value="제출하기"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
