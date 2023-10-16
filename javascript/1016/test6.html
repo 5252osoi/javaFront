@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test6.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <script>
+        'use strict';
+        function gugudan(){
+            let su1 = document.myform.su1.value;
+            let str ="";
+            str+=`${su1}단<br/>`;
+            for(let i =1; i<=9; i++){
+                str+= `${su1}*${i}=${su1*i}<br/>`;
+            }
+            document.getElementById("dap").innerHTML=`<font size="5" class='bg-danger'>${str}</font>`;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 폼을 통해서 숫자(구구단)을 입력받은후 해당 구구단을 출력하세요 -->
+    <p><br/></p>
+    <div class="container">
+        <h2>구구단 연습</h2>
+        <p>
+            <form name="myform">
+                <p>
+                    <div class="form-group mt-5">
+                        <label for="su1">몇단?</label>
+                        <input type="number" name="su1" id="su1" value="0" class="form-control"/>
+                        <input type="button" name="btn" value="구구단을외자" onclick="gugudan()" class="btn btn-primary mt-2"/>
+                        <div id="dap"></div>
+                    </div>
+                </p>
+            </form>
+        </p>
+    </div>
+</body>
+</html>

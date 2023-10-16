@@ -14,10 +14,13 @@
     <title>test3.html</title>
     <script src="test.js"></script>
     <script>
+
+        //알림메세지 출력 alert
         function msg1() {
             alert("ㅎㅇ요");
         }
         
+        //입력받기 prompt
         function msg2() {
             name = prompt("이름이 뭐에요?");
             alert(name+"씨 반가워요");
@@ -31,8 +34,16 @@
                 alert("합격("+age+")");
             }
         }
+        function ynCheck2(){
+            yn=confirm("작업 계속하기")
+            if(yn){
+                alert("작업을 계속합니다");
+            } else {
+                alert("작업을 중단합니다");
+            }
+        }
 
-        
+        //메세지창을 통해서 진행여부 결정하기(confirm)
     </script>
 </head>
 <body>
@@ -43,6 +54,7 @@
             <button type="button" onclick="msg2()" class="btn btn-warning">이름</button>
             <button type="button" onclick="agecheck()" class="btn btn-danger">나이</button>
             <button type="button" onclick="yncheck()" class="btn btn-primary">체크</button>
+            <button type="button" onclick="ynCheck2()" class="btn btn-secondary">체크</button>
         </form>
 
     </div>
