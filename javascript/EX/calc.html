@@ -14,21 +14,21 @@
 
 
         function calc1(sign){
-
+            
             if(sign=='='){
-                calc1.innerHTML=eval(calc1.innerHTML);
+                calc.innerHTML=eval(calc.innerHTML);
             } else {
-                if(calc1.innerHTML==null||calc1.innerHTML==0){
+                if(calc.innerHTML==null||calc.innerHTML==0){
                     if(isNaN(sign)==true){
                         console.log("확인1 "+sign);
                         alert("숫자를 먼저 입력하세요")
                     } else{
                         console.log("확인2 "+sign);
-                        calc1.innerHTML=sign;
+                        calc.innerHTML=sign;
                     }
                 } else{
                     console.log("확인3 "+sign);
-                    calc1.innerHTML += sign;
+                    calc.innerHTML += sign;
                 }
 
             }
@@ -50,7 +50,7 @@
     <div class="container">
         <h2> * 계산기 * </h2>
         <div class="row table-bordered">
-            <div class="col-sm-3" id="calc1" style="background-color:fff; font-size: 30px;">0</div>
+            <div class="col-sm-3" id="calc" style="background-color:fff; font-size: 30px;">0</div>
         </div>
         <div class="row" style="height:50px;">
             <div class="col-sm-3 table-bordered" onmouseover="this.style.color='grey'" onmouseout="this.style.color='black'" onclick="calc1('7')" value="7" style="background-color:rgb(200, 200, 200); font-size:30px;text-align:center;">7</div>
@@ -72,7 +72,7 @@
         </div>
         <div class="row" style="height:50px;">
             <div class="col-sm-6 table-bordered" onmouseover="this.style.color='grey'" onmouseout="this.style.color='black'" onclick="calc1('0')" value="0" style="background-color:rgb(175, 175, 175); font-size:30px;text-align:center;">0</div>
-            <div class="col-sm-3 table-bordered" onmouseover="this.style.color='grey'" onmouseout="this.style.color='black'" onclick="calc1.innerHTML='0'" style="background-color:rgb(175, 175, 175); font-size:30px;text-align:center;">C</div>
+            <div class="col-sm-3 table-bordered" onmouseover="this.style.color='grey'" onmouseout="this.style.color='black'" onclick="calc.innerHTML='0'" style="background-color:rgb(175, 175, 175); font-size:30px;text-align:center;">C</div>
             <div class="col-sm-3 table-bordered" onmouseover="this.style.color='grey'" onmouseout="this.style.color='black'" onclick="calc1('-')" value="-" style="background-color:rgb(175, 175, 175); font-size:30px;text-align:center;">-</div>
         </div>
         <div class="row" style="height:50px;">
