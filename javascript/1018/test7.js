@@ -30,6 +30,12 @@ function regexCheck(){
     const regex32= /홍길자+/g  // +앞의 글자가 1개이상 포함 유무
     const regex33= /홍길자*/g  // *앞의 글자 0개이상 포함
 
+    //콤마변환함수
+    function numberWithCommas(num){
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+    
+
     let content=document.getElementById("content").value.trim();
     
     if(content=="")alert("문자열으 ㄹ입력하세요");

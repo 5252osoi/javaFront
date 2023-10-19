@@ -1,2 +1,3 @@
 bootstrap
 W3school
+fontawesome.com
