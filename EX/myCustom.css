@@ -3,7 +3,8 @@
 * {
     box-sizing: border-box;
 }
-
+/*::after =>가상클래스 (.row 이후에 테이블로 모양을 잡아준다(위아래의 위치))
+!!참조)https://www.w3schools.com/css/css_rwd_grid.asp*/
 .row::after {
     content: "";
     clear: both;
@@ -19,20 +20,64 @@
 html {
     font-family: "맑은 고딕", sans-serif;
 }
-
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* min-height: 900px; */
+    opacity: 0.15;
+    z-index: -1000;
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+}
 .header {
-    /* background-color: rgb(200, 200, 200); */
+    background-color: rgb(200, 200, 200);
+    opacity: 0.5;
     color: #000;
     text-align: center;
     padding: 5px;
 }
 .navbar {
     background-color: #303030;
-    color: #ffffff;
+    color: #140e0e;
     /* margin-top: 15px; */
-    text-align: left;
+    text-align: right;
     padding: 15px;
     /* border-radius: 15px 15px 15px 15px; */
+}
+
+.drpDown{
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    
+
+}
+.drpDown-content{
+    background-color: #303030;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.drpDown-content a{
+    padding: 5px;
+    text-decoration: inherit;
+    color: #fff;
+    display: block;
+}
+.drpDown:hover .drpDown-content{
+    display: block;
+    top:25px;
+}
+.drpDown-content a:hover{
+    background-color: #606060;
+}
+
+.needClick{
+    cursor:pointer;
 }
 
 .row {
@@ -55,10 +100,11 @@ html {
 
 .menu li:hover {
     background-color: #454545;
+    cursor:pointer;
 }
 
 .aside {
-    background-color: #454545;
+    background-color: #afafaf;
     padding: 15px;
     color: #ffffff;
     text-align: center;
