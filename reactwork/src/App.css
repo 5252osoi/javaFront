@@ -1,0 +1,14 @@
+body{
+  background-color: lightskyblue;
+  margin: 0px;
+  padding: 0px;
+}
+.App{
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: rgb(241, 220, 194);
+}
+.title{
+  text-align: center;
+}
